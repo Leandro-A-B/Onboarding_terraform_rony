@@ -21,7 +21,8 @@ resource "aws_lambda_function" "crawlers" {
   }
 
   tags = {
-    foo = "bar"
+    key =  "Ambiente"
+    value = "Dev"    
   }
 
 }

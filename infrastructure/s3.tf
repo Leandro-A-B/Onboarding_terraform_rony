@@ -3,7 +3,8 @@ resource "aws_s3_bucket" "dl" {
   acl    = "private"
 
   tags = {
-    foo = "bar"
+    key =  "Ambiente"
+    value = "Dev"    
   }
   
   server_side_encryption_configuration {

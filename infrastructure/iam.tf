@@ -18,7 +18,8 @@ resource "aws_iam_role" "glue_role" {
 EOF
 
   tags = {
-    foo = "bar"
+    key =  "Ambiente"
+    value = "Dev"    
   }
 
 }

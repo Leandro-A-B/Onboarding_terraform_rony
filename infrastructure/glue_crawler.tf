@@ -12,6 +12,7 @@ resource "aws_glue_crawler" "raw" {
   }
 
   tags = {
-    foo = "bar"
+    key =  "Ambiente"
+    value = "Dev"    
   }
 }

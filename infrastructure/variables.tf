@@ -17,3 +17,8 @@ variable "lambda_function_name" {
   description = "Nome da Lambda Function"
   default = "my-lambda"
 }
+
+variable "path_bucket_name"{
+  description = "Pasta caminho do bucket"
+  default = "consumer-zone"
+}

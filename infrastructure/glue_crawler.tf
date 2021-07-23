@@ -1,4 +1,4 @@
-resource "aws_glue_catalog_database" "raw" {
+resource "aws_glue_catalog_database" "rawleandrobueno" {
   name = " onboarding-a3-leandro-bueno"  
 }
 

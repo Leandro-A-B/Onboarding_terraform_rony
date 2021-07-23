@@ -15,7 +15,7 @@ variable "account" {
 
 variable "lambda_function_name" {
   description = "Nome da Lambda Function"
-  default = "my-lambda"
+  default = "lambda-leandro-bueno"
 }
 
 variable "path_bucket_name"{

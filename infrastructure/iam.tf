@@ -173,11 +173,19 @@ resource "aws_iam_policy" "lambda" {
         {
             "Effect": "Allow",
             "Action": [
-                "logs:CreateLogGroup",
                 "logs:CreateLogStream",
+                "logs:CreateLogGroup",
                 "logs:PutLogEvents"
             ],
             "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:DeleteObject"
+            ],
+            "Resource": "arn:aws:s3:::onboarding-a3-leandro-bueno-127012818163/*"
         }
     ]
 }

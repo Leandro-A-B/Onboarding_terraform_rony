@@ -5,7 +5,7 @@ variable "aws_region" {
 
 variable "base_bucket_name" {
   description = "Nome do bucket"
-  default = "onboarding-a3-leandro-bueno"
+  default = "onboardingleandro-bueno"
 }
 
 variable "account" {

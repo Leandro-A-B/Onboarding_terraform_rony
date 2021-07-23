@@ -1,5 +1,5 @@
 resource "aws_glue_catalog_database" "raw" {
-  name = " onboarding-a3-Leandro-Bueno"  
+  name = " onboarding-a3-leandro-bueno"  
 }
 
 resource "aws_glue_crawler" "raw" {

@@ -1,11 +1,5 @@
 resource "aws_glue_catalog_database" "raw" {
-  name = " onboarding-a3-Leandro-Bueno"
-
-  tags = {
-    key =  "Ambiente"
-    value = "Dev"    
-  }
-  
+  name = " onboarding-a3-Leandro-Bueno"  
 }
 
 resource "aws_glue_crawler" "raw" {

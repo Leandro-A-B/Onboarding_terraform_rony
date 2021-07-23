@@ -2,9 +2,9 @@ resource "aws_glue_catalog_database" "raw" {
   name = " onboarding-a3-leandro-bueno"  
 }
 
-resource "aws_glue_crawler" "raw" {
+resource "aws_glue_crawler" "rawleandrobueno" {
   database_name = aws_glue_catalog_database.raw.name
-  name          = "dl_raw_crawler"
+  name          = "dl_raw_crawlerleandrobueno"
   role          = aws_iam_role.glue_role.arn
 
   s3_target {

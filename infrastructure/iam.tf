@@ -18,7 +18,8 @@ resource "aws_iam_role" "glue_role" {
 EOF
 
   tags = {
-    foo = "bar"
+    key =  "Ambiente"
+    value = "Dev"    
   }
 
 }
@@ -152,7 +153,8 @@ resource "aws_iam_role" "lambda" {
 EOF
 
   tags = {
-    foo = "bar"
+    key =  "Ambiente"
+    value = "Dev"    
   }
 
 }
@@ -186,4 +188,33 @@ EOF
 resource "aws_iam_role_policy_attachment" "lambda_attach" {
   role       = aws_iam_role.lambda.name
   policy_arn = aws_iam_policy.lambda.arn
+}
+
+
+resource "aws_iam_policy" "s3" {
+  name        = "AWSs3BasicExecutionRole"
+  path        = "/"
+  description = "Provides write, read and delete permissions"
+
+  policy = <<EOF
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": ["s3:ListBucket"],
+      "Resource": ["arn:aws:s3:::${var.base_bucket_name}-${var.account}"]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject",
+        "s3:GetObject",
+        "s3:DeleteObject"
+      ],
+      "Resource": ["arn:aws:s3:::${var.base_bucket_name}-${var.account}/*"]
+    }
+  ]
+}
+EOF
 }

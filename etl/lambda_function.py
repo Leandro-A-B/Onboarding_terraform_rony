@@ -27,5 +27,5 @@ def handler(event, context):
 
     return {
         'statusCode': 200,
-        'body': f'Subiram os arquivos no {bucket_name} na região {region}!'
+        'body': f'Subiram os arquivos no {bucket_name} na região {region} Boa Leandro!'
     }
